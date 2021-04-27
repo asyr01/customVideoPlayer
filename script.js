@@ -40,3 +40,5 @@ playBtn.addEventListener('click', togglePlay);
 video.addEventListener('click', togglePlay);
 // On video end, show play button icon
 video.addEventListener('ended', showPlayIcon);
+video.addEventListener('timeupdate', updateProgress);
+video.addEventListener('canplay', updateProgress);
