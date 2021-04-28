@@ -49,7 +49,6 @@ function setProgress(e) {
   const newTime = e.offsetX / progressRange.offsetWidth;
   progressBar.style.width = `${newTime * 100}%`;
   video.currentTime = newTime * video.duration;
-  console.log(newTime);
 }
 
 // Volume Controls --------------------------- //
@@ -68,7 +67,7 @@ function changeVolume(e) {
   video.volume = volume;
   // Change icon depending on volume
   volumeIcon.className = '';
-  if (volume > 0.7) {
+  if (volume >= 0.7) {
     volumeIcon.classList.add('fas', 'fa-volume-up');
   } else if (volume < 0.7 && volume > 0) {
     volumeIcon.classList.add('fas', 'fa-volume-down');
