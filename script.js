@@ -53,7 +53,7 @@ function setProgress(e) {
 }
 
 // Volume Controls --------------------------- //
-
+function changeVolume() {}
 // Change Playback Speed -------------------- //
 
 // Fullscreen ------------------------------- //
@@ -66,3 +66,4 @@ video.addEventListener('ended', showPlayIcon);
 video.addEventListener('timeupdate', updateProgress);
 video.addEventListener('canplay', updateProgress);
 progressRange.addEventListener('click', setProgress);
+volumeRange.addEventListener('click', changeVolume);
