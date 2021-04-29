@@ -113,6 +113,7 @@ function openFullscreen(elem) {
     /* IE11 */
     elem.msRequestFullscreen();
   }
+  video.classList.add('video-fullscreen');
 }
 
 /* Close fullscreen */
@@ -126,6 +127,7 @@ function closeFullscreen() {
     /* IE11 */
     document.msExitFullscreen();
   }
+  video.classList.remove('video-fullscreen');
 }
 
 let fullscreen = false;
