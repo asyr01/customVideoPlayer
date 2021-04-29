@@ -1,3 +1,4 @@
+const player = document.querySelector('.player');
 const video = document.querySelector('video');
 const progressRange = document.querySelector('.progress-range');
 const progressBar = document.querySelector('.progress-bar');
@@ -125,6 +126,18 @@ function closeFullscreen() {
     /* IE11 */
     document.msExitFullscreen();
   }
+}
+
+let fullscreen = false;
+
+// Toggle fullscreen
+function toggleFullscreen() {
+  if (!fullscreen) {
+    openFullscreen(player);
+  } else {
+    closeFullscreen();
+  }
+  fullscreen = !fullscreen;
 }
 
 // Event Listeners
